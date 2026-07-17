@@ -6,11 +6,11 @@ import SectionHeading from "@/src/components/SectionHeading";
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+    <section id="experience" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
       <SectionHeading
         eyebrow="Experience"
-        title="Building thoughtful products through systems, speed, and collaboration."
-        description="My experience spans product delivery, platform work, and modern web engineering across fast-moving teams."
+        title="Building scalable SaaS products across multiple domains."
+        description="2+ years of full stack work on merchant platforms, event ticketing, and course management systems."
       />
 
       <div className="relative border-l border-slate-200 pl-6 dark:border-slate-800">

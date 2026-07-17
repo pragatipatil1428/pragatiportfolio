@@ -6,11 +6,11 @@ import SectionHeading from "@/src/components/SectionHeading";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+    <section id="about" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
       <SectionHeading
         eyebrow="About"
-        title="I design and build products that feel calm, clear, and dependable."
-        description="My work sits at the intersection of engineering craft, thoughtful UX, and product impact."
+        title="Designing scalable, thoughtful products with engineering focus."
+        description="Building for reliability, performance, and meaningful user impact."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -44,14 +44,15 @@ export default function About() {
           {aboutHighlights.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="rounded-[1.5rem] border border-slate-200/80 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
+              transition={{ duration: 0.3, delay: index * 0.08 }}
+              whileHover={{ scale: 1.02 }}
+              className="rounded-xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-500">{item.title}</p>
-              <p className="mt-2 text-base leading-7 text-slate-600 dark:text-slate-300">{item.description}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500">{item.title}</p>
+              <p className="mt-1.5 text-sm leading-6 text-slate-600 dark:text-slate-300">{item.description}</p>
             </motion.div>
           ))}
         </div>

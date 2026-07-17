@@ -13,8 +13,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+    <section id="contact" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
