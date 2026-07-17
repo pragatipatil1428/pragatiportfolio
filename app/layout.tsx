@@ -13,8 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pragati Patil | Portfolio",
-  description: "Software engineer portfolio showcasing experience, skills, projects, and contact details.",
+  title: "Pragati Patil | Full Stack Software Engineer",
+  description: "Premium developer portfolio for Pragati Patil featuring experience, skills, projects, and contact details.",
+  openGraph: {
+    title: "Pragati Patil | Full Stack Software Engineer",
+    description: "Premium developer portfolio for Pragati Patil featuring experience, skills, projects, and contact details.",
+    type: "website",
+    url: "https://pragati.dev",
+  },
+  alternates: {
+    canonical: "https://pragati.dev",
+  },
 };
 
 export default function RootLayout({

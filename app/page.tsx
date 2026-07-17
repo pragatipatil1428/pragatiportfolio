@@ -6,18 +6,26 @@ import Experience from "@/src/components/Experience";
 import Projects from "@/src/components/Projects";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
+import AnimatedBackground from "@/src/components/AnimatedBackground";
+import ScrollProgress from "@/src/components/ScrollProgress";
+import BackToTop from "@/src/components/BackToTop";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
+      <AnimatedBackground />
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }

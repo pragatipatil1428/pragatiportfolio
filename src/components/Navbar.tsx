@@ -1,10 +1,12 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navLinks } from "@/src/utils";
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("theme");
@@ -21,21 +23,24 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#home" className="text-lg font-semibold tracking-wide text-slate-900 dark:text-slate-100">
           Pragati.dev
         </a>
         <div className="flex items-center gap-3">
           <div className="hidden items-center gap-6 md:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition ${isActive ? "text-slate-950 dark:text-white" : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"}`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
           <button
             type="button"
@@ -47,7 +52,7 @@ export default function Navbar() {
         </div>
       </nav>
       <div className="border-t border-slate-200/70 px-6 py-3 md:hidden dark:border-slate-800">
-        <div className="mx-auto flex max-w-6xl flex-wrap gap-3">
+        <div className="mx-auto flex max-w-7xl flex-wrap gap-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
