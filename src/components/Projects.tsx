@@ -40,7 +40,7 @@ export default function Projects() {
                 ))}
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
-                <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-slate-500 hover:text-slate-900 dark:border-slate-700 dark:text-slate-200">
+                <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-slate-400 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200">
                   <ExternalLink size={12} />
                   GitHub
                 </a>

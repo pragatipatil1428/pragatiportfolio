@@ -44,7 +44,7 @@ export default function Hero() {
               href="https://github.com/pragatipatil1428/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-500 hover:text-slate-900 dark:border-slate-700 dark:text-slate-200"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-400 px-4 py-2 text-xs font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200"
             >
               <Globe2 size={14} />
               GitHub
@@ -53,14 +53,14 @@ export default function Hero() {
               href="https://www.linkedin.com/in/pragati-patil1428/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-500 hover:text-slate-900 dark:border-slate-700 dark:text-slate-200"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-400 px-4 py-2 text-xs font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200"
             >
               <Globe2 size={14} />
               LinkedIn
             </a>
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-500 hover:text-slate-900 dark:border-slate-700 dark:text-slate-200"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-400 px-4 py-2 text-xs font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200"
             >
               <Mail size={14} />
               Contact

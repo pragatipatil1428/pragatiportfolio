@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Globe2, Mail, MapPin, Send } from "lucide-react";
+import LocationMap from "@/src/components/LocationMap";
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
@@ -45,8 +46,12 @@ export default function Contact() {
             </a>
             <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-slate-700 dark:border-slate-800 dark:bg-slate-950/70 dark:text-slate-200">
               <MapPin size={18} className="text-sky-500" />
-              <span>India</span>
+              <div>
+                <p className="font-medium">Pune, India</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Based in Maharashtra</p>
+              </div>
             </div>
+            <LocationMap />
           </div>
         </motion.div>
 
@@ -61,16 +66,16 @@ export default function Contact() {
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="flex flex-col gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
               Name
-              <input required value={formState.name} onChange={(event) => setFormState({ ...formState, name: event.target.value })} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80" />
+              <input required value={formState.name} onChange={(event) => setFormState({ ...formState, name: event.target.value })} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80 dark:text-white dark:placeholder-slate-400" />
             </label>
             <label className="flex flex-col gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
               Email
-              <input type="email" required value={formState.email} onChange={(event) => setFormState({ ...formState, email: event.target.value })} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80" />
+              <input type="email" required value={formState.email} onChange={(event) => setFormState({ ...formState, email: event.target.value })} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80 dark:text-white dark:placeholder-slate-400" />
             </label>
           </div>
           <label className="mt-4 flex flex-col gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
             Message
-            <textarea required rows={6} value={formState.message} onChange={(event) => setFormState({ ...formState, message: event.target.value })} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80" />
+            <textarea required rows={6} value={formState.message} onChange={(event) => setFormState({ ...formState, message: event.target.value })} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80 dark:text-white dark:placeholder-slate-400" />
           </label>
           <button type="submit" className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-500">
             <Send size={16} />
