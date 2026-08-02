@@ -107,6 +107,14 @@ export const projectItems: ProjectItem[] = [
     github: "https://github.com/pragatipatil1428/contenthub",
     demo: "https://contenthub-one-orcin.vercel.app/",
   },
+  {
+    title: "Minutely",
+    description:
+      "A full-stack AI-powered meeting notes & task management platform that captures meeting insights, auto-extracts action items into a Kanban board, and tracks productivity with analytics dashboards.",
+    image: "/images/projects/minutely.svg",
+    tags: ["Next.js", "React 19", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "React Query", "Recharts", "Framer Motion"],
+    github: "https://github.com/pragatipatil1428/meetingnotes",
+  },
 ];
 
 export const certificationItems = [

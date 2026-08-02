@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" rx="36" fill="#eef2ff"/>
+  <rect x="120" y="96" width="960" height="608" rx="28" fill="#ffffff" stroke="#c7d2fe" stroke-width="3"/>
+  <!-- Nav bar -->
+  <rect x="120" y="96" width="960" height="72" rx="28" fill="#ffffff"/>
+  <circle cx="176" cy="132" r="14" fill="#4f46e5"/>
+  <rect x="200" y="122" width="120" height="20" rx="10" fill="#4f46e5"/>
+  <circle cx="780" cy="132" r="10" fill="#e0e7ff"/>
+  <circle cx="810" cy="132" r="10" fill="#e0e7ff"/>
+  <rect x="848" y="118" width="100" height="28" rx="14" fill="#4f46e5"/>
+  <rect x="964" y="118" width="80" height="28" rx="14" fill="#e0e7ff"/>
+  <!-- Sidebar: meetings list -->
+  <rect x="156" y="200" width="220" height="472" rx="20" fill="#f5f3ff"/>
+  <rect x="180" y="224" width="90" height="14" rx="7" fill="#6366f1"/>
+  <rect x="180" y="256" width="172" height="44" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <circle cx="200" cy="278" r="7" fill="#a5b4fc"/>
+  <rect x="216" y="266" width="100" height="10" rx="5" fill="#6366f1"/>
+  <rect x="216" y="282" width="70" height="8" rx="4" fill="#c7d2fe"/>
+  <rect x="180" y="312" width="172" height="44" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <circle cx="200" cy="334" r="7" fill="#67e8f9"/>
+  <rect x="216" y="322" width="110" height="10" rx="5" fill="#0891b2"/>
+  <rect x="216" y="338" width="76" height="8" rx="4" fill="#cffafe"/>
+  <rect x="180" y="368" width="172" height="44" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <circle cx="200" cy="390" r="7" fill="#fbbf24"/>
+  <rect x="216" y="378" width="96" height="10" rx="5" fill="#d97706"/>
+  <rect x="216" y="394" width="84" height="8" rx="4" fill="#fef3c7"/>
+  <rect x="180" y="424" width="172" height="44" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <circle cx="200" cy="446" r="7" fill="#f0abfc"/>
+  <rect x="216" y="434" width="104" height="10" rx="5" fill="#c026d3"/>
+  <rect x="216" y="450" width="66" height="8" rx="4" fill="#fae8ff"/>
+  <!-- Main panel: meeting notes + AI summary -->
+  <rect x="404" y="200" width="440" height="288" rx="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="428" y="224" width="140" height="12" rx="6" fill="#334155"/>
+  <rect x="428" y="252" width="392" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="428" y="270" width="370" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="428" y="288" width="390" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="428" y="306" width="300" height="10" rx="5" fill="#cbd5e1"/>
+  <rect x="428" y="342" width="120" height="16" rx="8" fill="#e0e7ff"/>
+  <rect x="428" y="374" width="392" height="36" rx="12" fill="#eef2ff"/>
+  <rect x="444" y="386" width="26" height="12" rx="6" fill="#818cf8"/>
+  <rect x="480" y="387" width="300" height="10" rx="5" fill="#a5b4fc"/>
+  <rect x="428" y="420" width="392" height="36" rx="12" fill="#eef2ff"/>
+  <rect x="444" y="432" width="26" height="12" rx="6" fill="#34d399"/>
+  <rect x="480" y="433" width="280" height="10" rx="5" fill="#a7f3d0"/>
+  <!-- Kanban board -->
+  <rect x="404" y="516" width="200" height="156" rx="16" fill="#f5f3ff"/>
+  <rect x="428" y="536" width="70" height="12" rx="6" fill="#8b5cf6"/>
+  <rect x="424" y="560" width="160" height="30" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <rect x="436" y="572" width="90" height="8" rx="4" fill="#a5b4fc"/>
+  <rect x="424" y="598" width="160" height="30" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <rect x="436" y="610" width="110" height="8" rx="4" fill="#c7d2fe"/>
+  <rect x="424" y="636" width="160" height="30" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <rect x="436" y="648" width="80" height="8" rx="4" fill="#c7d2fe"/>
+  <rect x="620" y="516" width="200" height="156" rx="16" fill="#ecfdf5"/>
+  <rect x="644" y="536" width="70" height="12" rx="6" fill="#10b981"/>
+  <rect x="640" y="560" width="160" height="30" rx="10" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+  <rect x="652" y="572" width="100" height="8" rx="4" fill="#6ee7b7"/>
+  <rect x="640" y="598" width="160" height="30" rx="10" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+  <rect x="652" y="610" width="90" height="8" rx="4" fill="#6ee7b7"/>
+  <rect x="836" y="516" width="208" height="156" rx="16" fill="#fff7ed"/>
+  <rect x="860" y="536" width="70" height="12" rx="6" fill="#f59e0b"/>
+  <rect x="856" y="560" width="168" height="30" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="2"/>
+  <rect x="868" y="572" width="110" height="8" rx="4" fill="#fbbf24"/>
+  <rect x="856" y="598" width="168" height="30" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="2"/>
+  <rect x="868" y="610" width="130" height="8" rx="4" fill="#fcd34d"/>
+  <circle cx="988" cy="606" r="10" fill="#fbbf24"/>
+  <path d="M 984 606 l 8 5 l 12 -12" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Analytics bar chart -->
+  <rect x="876" y="200" width="168" height="160" rx="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="900" y="224" width="100" height="12" rx="6" fill="#334155"/>
+  <rect x="900" y="268" width="30" height="40" rx="6" fill="#6366f1"/>
+  <rect x="934" y="252" width="30" height="56" rx="6" fill="#818cf8"/>
+  <rect x="968" y="272" width="30" height="36" rx="6" fill="#a5b4fc"/>
+</svg>
