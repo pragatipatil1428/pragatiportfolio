@@ -9,8 +9,8 @@ export default function Skills() {
     <section id="skills" className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
       <SectionHeading
         eyebrow="Skills"
-        title="A pragmatic, modern tech toolkit."
-        description="React, Next.js, Node.js, PostgreSQL, and tools for scalable product work."
+        title="A practical toolkit for shipping real products."
+        description="Everything I rely on day to day — frontend frameworks, backend services, databases, and the integrations that power B2B SaaS."
       />
 
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">

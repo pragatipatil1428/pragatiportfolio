@@ -20,23 +20,23 @@ export interface ProjectItem {
 }
 
 export const heroStats = [
-  { label: "Years Experience", value: "2+" },
+  { label: "Years of Experience", value: "2+" },
   { label: "B2B SaaS Products", value: "5+" },
-  { label: "Core Focus", value: "Full Stack" },
+  { label: "Tools & Technologies", value: "20+" },
 ];
 
 export const aboutHighlights = [
   {
     title: "Experience",
-    description: "2+ years building scalable web applications for SaaS products and internal platforms.",
+    description: "2+ years building scalable B2B SaaS applications — onboarding, payments, reporting, and product management.",
   },
   {
     title: "Passion",
-    description: "Delivering secure, high-performance products with thoughtful UX and clean architecture.",
+    description: "Delivering secure, high-performance products with thoughtful UX, clean architecture, and reliable engineering.",
   },
   {
     title: "Current Focus",
-    description: "React, Next.js, TypeScript, Prisma, PostgreSQL, and product-led engineering.",
+    description: "React, Next.js, TypeScript, Prisma, PostgreSQL — and product-led engineering that ships.",
   },
 ];
 
@@ -54,7 +54,7 @@ export const skillGroups = [
   {
     title: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "Redis", "Firebase Firestore", "SQL"],
+    skills: ["PostgreSQL", "Redis", "Firebase Firestore"],
   },
   {
     title: "Tools",
@@ -66,17 +66,12 @@ export const skillGroups = [
     icon: Globe2,
     skills: ["WhatsApp Business API", "Telegram Bot API", "MSG91", "Razorpay"],
   },
-  {
-    title: "Product Focus",
-    icon: ShieldCheck,
-    skills: ["CRM", "Workflow Automation", "Payments", "KYC", "Reporting"],
-  },
 ];
 
 export const experienceItems = [
   {
     title: "Executive Software Engineer",
-    company: "Fynbit Tech Pvt. Ltd.",
+    company: "Fynbit Tech Pvt. Ltd., Pune",
     period: "Mar 2026 — Jul 2026",
     description:
       "Built scalable B2B SaaS workflows across onboarding, verification, payments, reporting, and product management modules.",
@@ -89,7 +84,7 @@ export const experienceItems = [
   },
   {
     title: "Junior Software Engineer",
-    company: "Pric Technology Pvt. Ltd.",
+    company: "PRIC Technology Pvt. Ltd., Pune",
     period: "Feb 2024 — Mar 2026",
     description:
       "Delivered multi-product SaaS experiences for events, courses, subscriptions, and payments with strong focus on reusable UI and reliability.",
@@ -111,30 +106,6 @@ export const projectItems: ProjectItem[] = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     github: "https://github.com/pragatipatil1428/contenthub",
     demo: "https://contenthub-one-orcin.vercel.app/",
-  },
-  {
-    title: "Fynbit Commerce",
-    description:
-      "A merchant operations platform that simplifies onboarding, workflows, and CRM automation.",
-    image: "/images/projects/fynbit.svg",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    github: "https://github.com/pragatipatil1428/",
-  },
-  {
-    title: "EventFlow",
-    description:
-      "A polished event management experience with QR ticketing, attendee insights, and reports.",
-    image: "/images/projects/event.svg",
-    tags: ["React", "Firebase", "Tailwind CSS"],
-    github: "https://github.com/pragatipatil1428/",
-  },
-  {
-    title: "CourseHub",
-    description:
-      "A course platform focused on content delivery, user progress tracking, and administration.",
-    image: "/images/projects/course.svg",
-    tags: ["Node.js", "Prisma", "Redis"],
-    github: "https://github.com/pragatipatil1428/",
   },
 ];
 

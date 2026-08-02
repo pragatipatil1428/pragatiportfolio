@@ -9,8 +9,8 @@ export default function About() {
     <section id="about" className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
       <SectionHeading
         eyebrow="About"
-        title="Designing scalable, thoughtful products with engineering focus."
-        description="Building for reliability, performance, and meaningful user impact."
+        title="Turning complex requirements into clean, dependable products."
+        description="A product-minded full stack engineer focused on B2B SaaS — from first commit to production."
       />
 
       <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
@@ -22,7 +22,7 @@ export default function About() {
           className="rounded-2xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
         >
           <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">
-            I’m a full stack engineer who enjoys moving from UI details to API architecture with equal care. I care deeply about making teams faster, products clearer, and interfaces more delightful.
+            I’m a full stack software engineer with 2+ years of experience shipping B2B SaaS platforms. I move comfortably from interface details to API architecture, and I care deeply about building products that are fast, secure, and genuinely useful to the people who use them.
           </p>
           <div className="mt-5 grid gap-2.5 sm:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 dark:border-slate-800 dark:bg-slate-950/70">
@@ -30,8 +30,8 @@ export default function About() {
               <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">Years of experience</p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 dark:border-slate-800 dark:bg-slate-950/70">
-              <p className="text-xl font-semibold text-slate-950 dark:text-white">B2B</p>
-              <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">SaaS & product work</p>
+              <p className="text-xl font-semibold text-slate-950 dark:text-white">5+</p>
+              <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">B2B SaaS products</p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 dark:border-slate-800 dark:bg-slate-950/70">
               <p className="text-xl font-semibold text-slate-950 dark:text-white">Full stack</p>
