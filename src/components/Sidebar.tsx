@@ -7,7 +7,6 @@ import { useTheme } from "@/src/hooks/useTheme";
 import { useActiveSection } from "@/src/hooks/useActiveSection";
 
 const sectionIcons: Record<string, React.ReactNode> = {
-  home: <Home size={20} />,
   about: <User size={20} />,
   skills: <Zap size={20} />,
   experience: <Briefcase size={20} />,
@@ -38,7 +37,9 @@ export default function Sidebar() {
 
         {/* Navigation Tabs */}
         <nav className="flex flex-col gap-3" aria-label="Sections">
-          {navLinks.map((link) => {
+          {navLinks
+            .filter((link) => link.href !== "#home")
+            .map((link) => {
             const sectionId = link.href.slice(1);
             const isActive = activeSection === sectionId;
             return (
