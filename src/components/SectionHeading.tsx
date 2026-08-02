@@ -21,14 +21,14 @@ export default function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.35 }}
-      className={`mb-8 flex flex-col gap-2 ${alignment}`}
+      className={`mb-5 flex flex-col gap-1 ${alignment}`}
     >
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500">{eyebrow}</p>
-      <h2 className="max-w-3xl text-2xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
+      <h2 className="max-w-3xl text-lg font-semibold tracking-tight text-slate-900 dark:text-white sm:text-xl">
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+        <p className="max-w-2xl text-xs leading-5 text-slate-600 dark:text-slate-300">
           {description}
         </p>
       ) : null}

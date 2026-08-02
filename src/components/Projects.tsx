@@ -8,14 +8,14 @@ import SectionHeading from "@/src/components/SectionHeading";
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+    <section id="projects" className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
       <SectionHeading
         eyebrow="Projects"
         title="Selected builds showcasing product thinking and craft."
         description="Personal and professional projects reflecting my engineering approach."
       />
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-3 lg:grid-cols-3">
         {projectItems.map((project, index) => (
           <motion.article
             key={project.title}
@@ -26,21 +26,21 @@ export default function Projects() {
             whileHover={{ y: -4, scale: 1.02 }}
             className="overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
           >
-            <div className="bg-slate-100 p-3 dark:bg-slate-800/80">
-              <Image src={project.image} alt={project.title} width={800} height={500} className="h-32 w-full rounded-lg object-cover" />
+            <div className="bg-slate-100 p-2 dark:bg-slate-800/80">
+              <Image src={project.image} alt={project.title} width={800} height={500} className="h-24 w-full rounded-lg object-cover" />
             </div>
-            <div className="p-4">
-              <h3 className="text-base font-semibold text-slate-900 dark:text-white">{project.title}</h3>
-              <p className="mt-2 text-xs leading-6 text-slate-600 dark:text-slate-300">{project.description}</p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
+            <div className="p-3">
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+              <p className="mt-1 text-xs leading-5 text-slate-600 dark:text-slate-300">{project.description}</p>
+              <div className="mt-2.5 flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-xs text-slate-700 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-200">
+                  <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] text-slate-700 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-200">
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-slate-400 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200">
+              <div className="mt-2.5 flex flex-wrap gap-2">
+                <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-slate-400 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200 dark:hover:text-white">
                   <ExternalLink size={12} />
                   GitHub
                 </a>
