@@ -1,4 +1,5 @@
 import Sidebar from "@/src/components/Sidebar";
+import Navbar from "@/src/components/Navbar";
 import Hero from "@/src/components/Hero";
 import About from "@/src/components/About";
 import Skills from "@/src/components/Skills";
@@ -16,6 +17,7 @@ export default function Home() {
       <ScrollProgress />
       <AnimatedBackground />
       <Sidebar />
+      <Navbar />
       <main className="md:ml-24">
         <Hero />
         <About />

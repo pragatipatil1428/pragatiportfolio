@@ -104,27 +104,36 @@ export const experienceItems = [
 
 export const projectItems: ProjectItem[] = [
   {
-    title: "Hotel Administration System",
+    title: "ContentHub",
     description:
-      "A .NET-based administration system for room booking, customer records, and hotel operations management.",
-    image: "/images/projects/hotel.svg",
-    tags: [".NET", "C#", "SQL"],
+      "A premium digital content marketplace where creators sell and buyers instantly access courses, templates, ebooks, software, and more — with secure payments and a full user dashboard.",
+    image: "/images/projects/contenthub.svg",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    github: "https://github.com/pragatipatil1428/contenthub",
+    demo: "https://contenthub-one-orcin.vercel.app/",
+  },
+  {
+    title: "Fynbit Commerce",
+    description:
+      "A merchant operations platform that simplifies onboarding, workflows, and CRM automation.",
+    image: "/images/projects/fynbit.svg",
+    tags: ["Next.js", "TypeScript", "PostgreSQL"],
     github: "https://github.com/pragatipatil1428/",
   },
   {
-    title: "Task Management App",
+    title: "EventFlow",
     description:
-      "A practical task and workflow app focused on planning, organization, and daily execution.",
-    image: "/images/projects/task.svg",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
+      "A polished event management experience with QR ticketing, attendee insights, and reports.",
+    image: "/images/projects/event.svg",
+    tags: ["React", "Firebase", "Tailwind CSS"],
     github: "https://github.com/pragatipatil1428/",
   },
   {
-    title: "React Calculator",
+    title: "CourseHub",
     description:
-      "A clean, minimal calculator experience designed for everyday use and quick interactions.",
-    image: "/images/projects/calculator.svg",
-    tags: ["React", "JavaScript", "CSS"],
+      "A course platform focused on content delivery, user progress tracking, and administration.",
+    image: "/images/projects/course.svg",
+    tags: ["Node.js", "Prisma", "Redis"],
     github: "https://github.com/pragatipatil1428/",
   },
 ];

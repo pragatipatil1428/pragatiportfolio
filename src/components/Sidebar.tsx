@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Home, User, Zap, Briefcase, Code2, Mail, Moon, Sun } from "lucide-react";
 import { navLinks } from "@/src/utils";
+import { useTheme } from "@/src/hooks/useTheme";
+import { useActiveSection } from "@/src/hooks/useActiveSection";
 
 const sectionIcons: Record<string, React.ReactNode> = {
   home: <Home size={20} />,
@@ -15,39 +16,8 @@ const sectionIcons: Record<string, React.ReactNode> = {
 };
 
 export default function Sidebar() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = savedTheme ? savedTheme === "dark" : prefersDark;
-    setDarkMode(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
-    window.localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navLinks.map((link) => link.href.slice(1));
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 100) {
-            setActiveSection(section);
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { darkMode, toggleDarkMode } = useTheme();
+  const activeSection = useActiveSection();
 
   return (
     <motion.aside
@@ -61,12 +31,13 @@ export default function Sidebar() {
         <a
           href="#home"
           className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-sky-600 transition hover:border-slate-400 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700 md:h-14 md:w-14"
+          aria-label="Back to top"
         >
           <Home size={20} />
         </a>
 
         {/* Navigation Tabs */}
-        <nav className="flex flex-col gap-3">
+        <nav className="flex flex-col gap-3" aria-label="Sections">
           {navLinks.map((link) => {
             const sectionId = link.href.slice(1);
             const isActive = activeSection === sectionId;
@@ -82,7 +53,15 @@ export default function Sidebar() {
                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-200"
                 }`}
                 title={link.label}
+                aria-current={isActive ? "true" : undefined}
               >
+                {isActive ? (
+                  <motion.span
+                    layoutId="sidebar-active"
+                    className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r-full bg-sky-500"
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
+                ) : null}
                 {sectionIcons[sectionId] || null}
               </motion.a>
             );
@@ -90,14 +69,29 @@ export default function Sidebar() {
         </nav>
 
         {/* Theme Toggle */}
-        {/* <button
+        <motion.button
           type="button"
-          onClick={() => setDarkMode((value) => !value)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-200 md:h-12 md:w-12"
-          title={darkMode ? "Light mode" : "Dark mode"}
+          onClick={toggleDarkMode}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.92 }}
+          className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-600 transition hover:border-slate-400 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-100 md:h-12 md:w-12"
+          title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          suppressHydrationWarning
         >
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-        </button> */}
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.span
+              key={darkMode ? "sun" : "moon"}
+              initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+              animate={{ rotate: 0, opacity: 1, scale: 1 }}
+              exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.2 }}
+              className="flex"
+            >
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </motion.span>
+          </AnimatePresence>
+        </motion.button>
       </div>
     </motion.aside>
   );
