@@ -23,7 +23,10 @@ export default function SectionHeading({
       transition={{ duration: 0.35 }}
       className={`mb-5 flex flex-col gap-1 ${alignment}`}
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500">{eyebrow}</p>
+      <div className="inline-flex items-center gap-2">
+        <span className="h-px w-6 bg-gradient-to-r from-indigo-500 to-fuchsia-500" />
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] bg-gradient-to-r from-indigo-600 to-fuchsia-500 bg-clip-text text-transparent dark:from-indigo-400 dark:to-fuchsia-400">{eyebrow}</p>
+      </div>
       <h2 className="max-w-3xl text-lg font-semibold tracking-tight text-slate-900 dark:text-white sm:text-xl">
         {title}
       </h2>

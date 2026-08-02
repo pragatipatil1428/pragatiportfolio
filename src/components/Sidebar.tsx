@@ -29,7 +29,7 @@ export default function Sidebar() {
         {/* Logo */}
         <a
           href="#home"
-          className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-sky-600 transition hover:border-slate-400 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700 md:h-14 md:w-14"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-violet-50 text-indigo-600 transition hover:border-indigo-400 dark:border-indigo-500/40 dark:from-indigo-950/60 dark:to-violet-950/60 dark:text-indigo-400 dark:hover:border-indigo-400 md:h-14 md:w-14"
           aria-label="Back to top"
         >
           <Home size={20} />
@@ -50,7 +50,7 @@ export default function Sidebar() {
                 whileTap={{ scale: 0.95 }}
                 className={`relative flex h-10 w-10 items-center justify-center rounded-lg transition md:h-12 md:w-12 ${
                   isActive
-                    ? "bg-sky-100 text-sky-600 dark:bg-sky-900/40 dark:text-sky-300"
+                    ? "bg-indigo-100 text-indigo-600 dark:bg-indigo-900/40 dark:text-indigo-300"
                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-200"
                 }`}
                 title={link.label}
@@ -59,7 +59,7 @@ export default function Sidebar() {
                 {isActive ? (
                   <motion.span
                     layoutId="sidebar-active"
-                    className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r-full bg-sky-500"
+                    className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r-full bg-gradient-to-b from-indigo-500 to-fuchsia-500"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 ) : null}
@@ -75,7 +75,7 @@ export default function Sidebar() {
           onClick={toggleDarkMode}
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.92 }}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-600 transition hover:border-slate-400 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-slate-600 dark:hover:text-slate-100 md:h-12 md:w-12"
+          className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-600 transition hover:border-indigo-400 hover:text-indigo-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-indigo-500 dark:hover:text-indigo-300 md:h-12 md:w-12"
           title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           suppressHydrationWarning

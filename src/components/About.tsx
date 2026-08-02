@@ -49,9 +49,9 @@ export default function About() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.3, delay: index * 0.08 }}
               whileHover={{ scale: 1.02 }}
-              className="rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
+              className="rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur transition hover:border-indigo-200 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-indigo-800"
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-sky-500">{item.title}</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] bg-gradient-to-r from-indigo-600 to-fuchsia-500 bg-clip-text text-transparent dark:from-indigo-400 dark:to-fuchsia-400">{item.title}</p>
               <p className="mt-0.5 text-xs leading-5 text-slate-600 dark:text-slate-300">{item.description}</p>
             </motion.div>
           ))}

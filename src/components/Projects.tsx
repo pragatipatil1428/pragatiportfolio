@@ -24,7 +24,7 @@ export default function Projects() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.3, delay: index * 0.06 }}
             whileHover={{ y: -4, scale: 1.02 }}
-            className="overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
+            className="overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 shadow-sm backdrop-blur transition hover:border-indigo-200 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-indigo-800"
           >
             <div className="bg-slate-100 p-2 dark:bg-slate-800/80">
               <Image src={project.image} alt={project.title} width={800} height={500} className="h-24 w-full rounded-lg object-cover" />
@@ -40,12 +40,12 @@ export default function Projects() {
                 ))}
               </div>
               <div className="mt-2.5 flex flex-wrap gap-2">
-                <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-slate-400 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:border-slate-600 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200 dark:hover:text-white">
+                <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-indigo-300 bg-white/60 px-3 py-1.5 text-xs font-semibold text-indigo-700 transition hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-900 dark:border-indigo-500/40 dark:bg-transparent dark:text-indigo-300 dark:hover:border-indigo-400 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-200">
                   <ExternalLink size={12} />
                   GitHub
                 </a>
                 {project.demo ? (
-                  <a href={project.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-slate-950 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-500">
+                  <a href={project.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm shadow-indigo-500/30 transition hover:from-indigo-500 hover:to-violet-500 dark:from-indigo-500 dark:to-fuchsia-500 dark:hover:from-indigo-400 dark:hover:to-fuchsia-400">
                     <ExternalLink size={12} />
                     Demo
                   </a>

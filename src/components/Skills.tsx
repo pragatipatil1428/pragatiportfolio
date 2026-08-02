@@ -24,10 +24,10 @@ export default function Skills() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.3, delay: index * 0.06 }}
               whileHover={{ y: -4, scale: 1.02 }}
-              className="rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur transition dark:border-slate-800 dark:bg-slate-900/70"
+              className="rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-indigo-200 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-indigo-800"
             >
               <div className="flex items-center gap-2">
-                <div className="rounded-md bg-sky-100 p-1.5 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">
+                <div className="rounded-md bg-gradient-to-br from-indigo-100 to-violet-100 p-1.5 text-indigo-600 dark:from-indigo-900/40 dark:to-violet-900/40 dark:text-indigo-300">
                   <Icon size={14} />
                 </div>
                 <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{group.title}</h3>
