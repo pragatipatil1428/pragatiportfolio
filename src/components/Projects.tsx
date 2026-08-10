@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Info } from "lucide-react";
 import { projectItems } from "@/src/data/portfolio";
 import SectionHeading from "@/src/components/SectionHeading";
 
@@ -39,6 +39,12 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              {project.note ? (
+                <p className="mt-2.5 flex items-start gap-1.5 rounded-lg border border-amber-200/70 bg-amber-50/60 px-2.5 py-1.5 text-[11px] leading-4 text-amber-700 dark:border-amber-500/20 dark:bg-amber-500/5 dark:text-amber-300">
+                  <Info size={12} className="mt-0.5 shrink-0" />
+                  {project.note}
+                </p>
+              ) : null}
               <div className="mt-2.5 flex flex-wrap gap-2">
                 <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full border border-indigo-300 bg-white/60 px-3 py-1.5 text-xs font-semibold text-indigo-700 transition hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-900 dark:border-indigo-500/40 dark:bg-transparent dark:text-indigo-300 dark:hover:border-indigo-400 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-200">
                   <ExternalLink size={12} />

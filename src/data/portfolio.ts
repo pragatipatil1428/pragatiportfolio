@@ -17,6 +17,7 @@ export interface ProjectItem {
   tags: string[];
   github: string;
   demo?: string;
+  note?: string;
 }
 
 export const heroStats = [
@@ -101,19 +102,21 @@ export const projectItems: ProjectItem[] = [
   {
     title: "ContentHub",
     description:
-      "A premium digital content marketplace where creators sell and buyers instantly access courses, templates, ebooks, software, and more — with secure payments and a full user dashboard.",
+      "A full-stack digital content marketplace for buying and selling courses, ebooks, templates, and software — with UPI/QR payments, JWT auth, and admin approval workflows.",
     image: "/images/projects/contenthub.svg",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    tags: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "JWT", "Tailwind CSS", "Zustand", "Vercel"],
     github: "https://github.com/pragatipatil1428/contenthub",
     demo: "https://contenthub-one-orcin.vercel.app/",
+    note: "Admin panel access is available on request — contact me for demo credentials.",
   },
   {
     title: "Minutely",
     description:
-      "A full-stack AI-powered meeting notes & task management platform that captures meeting insights, auto-extracts action items into a Kanban board, and tracks productivity with analytics dashboards.",
+      "An AI-powered meeting-notes platform that turns raw notes into summaries, decisions, and tasks — with authentication, a Kanban task board, and an analytics dashboard.",
     image: "/images/projects/minutely.svg",
-    tags: ["Next.js", "React 19", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "React Query", "Recharts", "Framer Motion"],
+    tags: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS", "Vercel", "Docker"],
     github: "https://github.com/pragatipatil1428/meetingnotes",
+    demo: "https://meetingnotes-wheat.vercel.app/",
   },
 ];
 
