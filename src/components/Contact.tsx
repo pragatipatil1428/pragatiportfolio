@@ -2,15 +2,41 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Globe2, Mail, MapPin, Send } from "lucide-react";
+import { AlertCircle, CheckCircle2, Globe2, Mail, MapPin, Send } from "lucide-react";
 import LocationMap from "@/src/components/LocationMap";
 
 export default function Contact() {
-  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+  const [formState, setFormState] = useState({ name: "", email: "", message: "", gotcha: "" });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [statusMessage, setStatusMessage] = useState("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    window.location.href = `mailto:pragatipatil1428@gmail.com?subject=Portfolio Inquiry from ${encodeURIComponent(formState.name)}&body=${encodeURIComponent(formState.message)}`;
+    setStatus("sending");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        setStatus("error");
+        setStatusMessage(data.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+
+      setStatus("success");
+      setStatusMessage("Thanks for reaching out! Your message has been sent.");
+      setFormState({ name: "", email: "", message: "", gotcha: "" });
+    } catch {
+      setStatus("error");
+      setStatusMessage("Could not reach the server. Please try again later.");
+    }
   };
 
   return (
@@ -63,6 +89,16 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="rounded-2xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70"
         >
+          <input
+            type="text"
+            name="gotcha"
+            value={formState.gotcha}
+            onChange={(event) => setFormState({ ...formState, gotcha: event.target.value })}
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
           <div className="grid gap-2.5 sm:grid-cols-2">
             <label className="flex flex-col gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
               Name
@@ -77,10 +113,26 @@ export default function Contact() {
             Message
             <textarea required rows={4} value={formState.message} onChange={(event) => setFormState({ ...formState, message: event.target.value })} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 placeholder-slate-500 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-950/80 dark:text-white dark:placeholder-slate-400" />
           </label>
-          <button type="submit" className="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-indigo-500/30 transition hover:from-indigo-500 hover:to-violet-500 dark:from-indigo-500 dark:to-fuchsia-500 dark:hover:from-indigo-400 dark:hover:to-fuchsia-400">
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-indigo-500/30 transition hover:from-indigo-500 hover:to-violet-500 disabled:cursor-not-allowed disabled:opacity-60 dark:from-indigo-500 dark:to-fuchsia-500 dark:hover:from-indigo-400 dark:hover:to-fuchsia-400"
+          >
             <Send size={16} />
-            Send message
+            {status === "sending" ? "Sending…" : "Send message"}
           </button>
+          {status === "success" ? (
+            <p role="status" className="mt-3 flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+              <CheckCircle2 size={16} />
+              {statusMessage}
+            </p>
+          ) : null}
+          {status === "error" ? (
+            <p role="alert" className="mt-3 flex items-center gap-2 text-sm font-medium text-rose-600 dark:text-rose-400">
+              <AlertCircle size={16} />
+              {statusMessage}
+            </p>
+          ) : null}
         </motion.form>
       </div>
     </section>
