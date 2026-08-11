@@ -2,11 +2,11 @@
 
 export default function LocationMap() {
   return (
-    <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+    <div className="mt-1.5 overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800">
       <iframe
         title="Map showing Pune, Maharashtra, India"
         width="100%"
-        height="300"
+        height="140"
         style={{ border: 0 }}
         loading="lazy"
         allowFullScreen
