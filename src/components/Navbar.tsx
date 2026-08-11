@@ -2,13 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Moon, Sun } from "lucide-react";
 import { navLinks } from "@/src/utils";
-import { useTheme } from "@/src/hooks/useTheme";
 import { useActiveSection } from "@/src/hooks/useActiveSection";
 
 export default function Navbar() {
-  const { darkMode, toggleDarkMode } = useTheme();
   const activeSection = useActiveSection();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -16,7 +13,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80 md:hidden">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <a href="#home" className="text-base font-semibold tracking-wide text-slate-900 dark:text-slate-100">
-          Pragati.dev
+          Pragati Patil
         </a>
         <div className="flex items-center gap-3">
           {/* Mobile menu toggle */}
@@ -40,6 +37,7 @@ export default function Navbar() {
               className="h-0.5 w-4 rounded-full bg-slate-800 dark:bg-slate-100"
             />
           </button>
+          {/* Theme Toggle
           <button
             type="button"
             onClick={toggleDarkMode}
@@ -61,6 +59,7 @@ export default function Navbar() {
               </motion.span>
             </AnimatePresence>
           </button>
+          */}
         </div>
       </nav>
       <AnimatePresence>
