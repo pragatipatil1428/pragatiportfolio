@@ -79,6 +79,7 @@ export default function Sidebar() {
           title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           suppressHydrationWarning
+          disabled={true}
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.span
