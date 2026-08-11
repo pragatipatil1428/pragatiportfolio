@@ -1,9 +1,8 @@
 'use client';
 
-import { motion, AnimatePresence } from "framer-motion";
-import { Home, User, Zap, Briefcase, Code2, Mail, Moon, Sun } from "lucide-react";
+import { motion } from "framer-motion";
+import { Home, User, Zap, Briefcase, Code2, Mail } from "lucide-react";
 import { navLinks } from "@/src/utils";
-import { useTheme } from "@/src/hooks/useTheme";
 import { useActiveSection } from "@/src/hooks/useActiveSection";
 
 const sectionIcons: Record<string, React.ReactNode> = {
@@ -15,7 +14,6 @@ const sectionIcons: Record<string, React.ReactNode> = {
 };
 
 export default function Sidebar() {
-  const { darkMode, toggleDarkMode } = useTheme();
   const activeSection = useActiveSection();
 
   return (
@@ -69,7 +67,7 @@ export default function Sidebar() {
           })}
         </nav>
 
-        {/* Theme Toggle */}
+        {/* Theme Toggle
         <motion.button
           type="button"
           onClick={toggleDarkMode}
@@ -94,6 +92,10 @@ export default function Sidebar() {
             </motion.span>
           </AnimatePresence>
         </motion.button>
+        */}
+
+        {/* Invisible spacer matching the old theme button size to keep the nav icons centered */}
+        <div className="h-10 w-10 md:h-12 md:w-12" aria-hidden="true" />
       </div>
     </motion.aside>
   );
