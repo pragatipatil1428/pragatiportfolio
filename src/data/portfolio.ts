@@ -118,6 +118,15 @@ export const projectItems: ProjectItem[] = [
     github: "https://github.com/pragatipatil1428/meetingnotes",
     demo: "https://meetingnotes-wheat.vercel.app/",
   },
+  {
+    title: "Spendly",
+    description:
+      "A full-stack personal expense tracker for managing income and expenses — with real-time dashboards, Chart.js analytics, monthly summaries, and one-click CSV export. JWT auth, user-scoped data, and a responsive dark/light UI deployed on Vercel.",
+    image: "/images/projects/spendly.svg",
+    tags: ["React", "Vite", "JavaScript", "Express", "MongoDB", "Mongoose", "JWT", "Chart.js", "Vercel"],
+    github: "https://github.com/pragatipatil1428/expensetracker",
+    demo: "https://expensetracker-nu-black.vercel.app/",
+  },
 ];
 
 export const certificationItems = [
