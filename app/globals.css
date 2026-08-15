@@ -21,6 +21,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keep section headings clear of the sticky mobile navbar */
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 4rem;
+  }
+}
+
 body {
   min-height: 100vh;
   background: var(--background);

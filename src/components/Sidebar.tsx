@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Home, User, Zap, Briefcase, Code2, Mail } from "lucide-react";
-import { navLinks } from "@/src/utils";
+import { navLinks, scrollToId } from "@/src/utils";
 import { useActiveSection } from "@/src/hooks/useActiveSection";
 
 const sectionIcons: Record<string, React.ReactNode> = {
@@ -27,6 +27,10 @@ export default function Sidebar() {
         {/* Logo */}
         <a
           href="#home"
+          onClick={(event) => {
+            event.preventDefault();
+            scrollToId("home");
+          }}
           className="flex h-12 w-12 items-center justify-center rounded-xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-violet-50 text-indigo-600 transition hover:border-indigo-400 dark:border-indigo-500/40 dark:from-indigo-950/60 dark:to-violet-950/60 dark:text-indigo-400 dark:hover:border-indigo-400 md:h-14 md:w-14"
           aria-label="Back to top"
         >
@@ -44,6 +48,10 @@ export default function Sidebar() {
               <motion.a
                 key={link.href}
                 href={link.href}
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToId(sectionId);
+                }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`relative flex h-10 w-10 items-center justify-center rounded-lg transition md:h-12 md:w-12 ${

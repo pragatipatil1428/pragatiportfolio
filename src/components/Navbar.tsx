@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/src/utils";
 import { useActiveSection } from "@/src/hooks/useActiveSection";
@@ -8,6 +8,7 @@ import { useActiveSection } from "@/src/hooks/useActiveSection";
 export default function Navbar() {
   const activeSection = useActiveSection();
   const [menuOpen, setMenuOpen] = useState(false);
+  const pendingSection = useRef<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80 md:hidden">
@@ -62,7 +63,16 @@ export default function Navbar() {
           */}
         </div>
       </nav>
-      <AnimatePresence>
+      <AnimatePresence
+        onExitComplete={() => {
+          if (pendingSection.current) {
+            document
+              .getElementById(pendingSection.current)
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            pendingSection.current = null;
+          }
+        }}
+      >
         {menuOpen ? (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -79,7 +89,11 @@ export default function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      pendingSection.current = link.href.slice(1);
+                      setMenuOpen(false);
+                    }}
                     className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
                       isActive
                         ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300"

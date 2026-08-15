@@ -24,15 +24,7 @@ export default function About() {
           <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">
             I’m a full stack software engineer with 2+ years of experience shipping B2B SaaS platforms. I move comfortably from interface details to API architecture, and I care deeply about building products that are fast, secure, and genuinely useful to the people who use them.
           </p>
-          <div className="mt-5 grid gap-2.5 sm:grid-cols-3">
-            <div className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 dark:border-slate-800 dark:bg-slate-950/70">
-              <p className="text-xl font-semibold text-slate-950 dark:text-white">2+</p>
-              <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">Years of experience</p>
-            </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 dark:border-slate-800 dark:bg-slate-950/70">
-              <p className="text-xl font-semibold text-slate-950 dark:text-white">5+</p>
-              <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">B2B SaaS products</p>
-            </div>
+          <div className="mt-5 grid gap-2.5">
             <div className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 dark:border-slate-800 dark:bg-slate-950/70">
               <p className="text-xl font-semibold text-slate-950 dark:text-white">Full stack</p>
               <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">Frontend & backend</p>

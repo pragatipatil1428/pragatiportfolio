@@ -1,12 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Download, FolderGit2, Mail } from "lucide-react";
 import { heroStats } from "@/src/data/portfolio";
-
-const floatingBadges = ["React", "Next.js", "TypeScript", "Tailwind", "Node.js"];
+import { scrollToId } from "@/src/utils";
 
 function GitHubIcon({ size = 14 }: { size?: number }) {
   return (
@@ -79,20 +77,28 @@ export default function Hero() {
               <LinkedInIcon size={14} />
               LinkedIn
             </a>
-            <Link
+            <a
               href="#projects"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToId("projects");
+              }}
               className="inline-flex items-center gap-1.5 rounded-full border border-indigo-300 bg-white/60 px-3 py-1 text-xs font-semibold text-indigo-700 transition hover:-translate-y-0.5 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-900 dark:border-indigo-500/40 dark:bg-transparent dark:text-indigo-300 dark:hover:border-indigo-400 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-200"
             >
               <FolderGit2 size={14} />
               View Projects
-            </Link>
-            <Link
+            </a>
+            <a
               href="#contact"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToId("contact");
+              }}
               className="inline-flex items-center gap-1.5 rounded-full border border-indigo-300 bg-white/60 px-3 py-1 text-xs font-semibold text-indigo-700 transition hover:-translate-y-0.5 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-900 dark:border-indigo-500/40 dark:bg-transparent dark:text-indigo-300 dark:hover:border-indigo-400 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-200"
             >
               <Mail size={14} />
               Contact
-            </Link>
+            </a>
           </div>
 
           <div className="mt-4 grid gap-2.5 sm:grid-cols-3">
@@ -149,18 +155,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45, delay: 0.1 }}
-        className="mt-6 flex flex-wrap gap-1.5 lg:hidden"
-      >
-        {floatingBadges.map((badge) => (
-          <span key={badge} className="rounded-full border border-slate-200 bg-white/70 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200">
-            {badge}
-          </span>
-        ))}
-      </motion.div>
     </section>
   );
 }

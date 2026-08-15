@@ -20,12 +20,6 @@ export interface ProjectItem {
   note?: string;
 }
 
-export const heroStats = [
-  { label: "Years of Experience", value: "2+" },
-  { label: "B2B SaaS Products", value: "5+" },
-  { label: "Tools & Technologies", value: "20+" },
-];
-
 export const aboutHighlights = [
   {
     title: "Experience",
@@ -37,7 +31,7 @@ export const aboutHighlights = [
   },
   {
     title: "Current Focus",
-    description: "React, Next.js, TypeScript, Prisma, PostgreSQL — and product-led engineering that ships.",
+    description: "Product-led engineering that ships — from clean architecture to secure, high-performance features.",
   },
 ];
 
@@ -66,6 +60,15 @@ export const skillGroups = [
     title: "Integrations",
     icon: Globe2,
     skills: ["WhatsApp Business API", "Telegram Bot API", "MSG91", "Razorpay"],
+  },
+];
+
+export const heroStats = [
+  { label: "Years of Experience", value: "2+" },
+  { label: "B2B SaaS Products", value: "3" },
+  {
+    label: "Tools & Technologies",
+    value: `${skillGroups.reduce((total, group) => total + group.skills.length, 0)}`,
   },
 ];
 
