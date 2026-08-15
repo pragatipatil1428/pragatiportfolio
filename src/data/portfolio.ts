@@ -65,10 +65,10 @@ export const skillGroups = [
 
 export const heroStats = [
   { label: "Years of Experience", value: "2+" },
-  { label: "B2B SaaS Products", value: "3" },
+  { label: "B2B SaaS Products", value: "3+" },
   {
     label: "Tools & Technologies",
-    value: `${skillGroups.reduce((total, group) => total + group.skills.length, 0)}`,
+    value: `${skillGroups.reduce((total, group) => total + group.skills.length, 0)}+`,
   },
 ];
 
@@ -137,18 +137,21 @@ export const certificationItems = [
     title: "Java Full Stack Development",
     issuer: "QSpiders Software Testing Training Institute, Pune",
     year: "2023",
+    grade: "",
     icon: BrainCircuit,
   },
   {
     title: "MCA",
     issuer: "SRTMU University",
     year: "2023",
+    grade: "79.89%",
     icon: Sparkles,
   },
   {
     title: "B.Sc. Computer Science",
     issuer: "SRTMU University",
     year: "2021",
+    grade: "85.34%",
     icon: Rocket,
   },
 ];
