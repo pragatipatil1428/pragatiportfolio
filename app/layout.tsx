@@ -14,10 +14,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Pragati Patil | Full Stack Software Engineer",
-  description: "Premium developer portfolio for Pragati Patil featuring experience, skills, projects, and contact details.",
+  description:
+    "Full Stack Software Engineer portfolio featuring ContentHub, Minutely, and Spendly — SaaS platforms demonstrating payments, authentication, PostgreSQL/MongoDB, REST APIs, analytics, and modern React/Next.js development.",
+  keywords: [
+    "Pragati Patil",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "SaaS",
+    "ContentHub",
+    "Minutely",
+    "Spendly",
+    "Razorpay",
+    "PostgreSQL",
+    "MongoDB",
+  ],
   openGraph: {
     title: "Pragati Patil | Full Stack Software Engineer",
-    description: "Premium developer portfolio for Pragati Patil featuring experience, skills, projects, and contact details.",
+    description:
+      "Full Stack Software Engineer portfolio featuring ContentHub, Minutely, and Spendly — SaaS platforms demonstrating payments, authentication, PostgreSQL/MongoDB, REST APIs, analytics, and modern React/Next.js development.",
     type: "website",
     url: "https://pragati.dev",
   },

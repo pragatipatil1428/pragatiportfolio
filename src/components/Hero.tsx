@@ -101,7 +101,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-4 grid gap-2.5 sm:grid-cols-3">
+          <div className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
             {heroStats.map((stat) => (
               <div key={stat.label} className="rounded-lg border border-slate-200/80 bg-white/70 px-2.5 py-2 shadow-sm backdrop-blur transition hover:border-indigo-200 dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-indigo-800">
                 <p className="text-sm font-semibold text-slate-950 dark:text-white">{stat.value}</p>

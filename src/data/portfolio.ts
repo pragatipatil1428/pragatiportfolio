@@ -5,20 +5,9 @@ import {
   Globe2,
   Layers3,
   Rocket,
-  ShieldCheck,
   Sparkles,
   Workflow,
 } from "lucide-react";
-
-export interface ProjectItem {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  github: string;
-  demo?: string;
-  note?: string;
-}
 
 export const aboutHighlights = [
   {
@@ -66,6 +55,7 @@ export const skillGroups = [
 export const heroStats = [
   { label: "Years of Experience", value: "2+" },
   { label: "B2B SaaS Products", value: "3+" },
+  { label: "Featured Full-Stack Projects", value: "3" },
   {
     label: "Tools & Technologies",
     value: `${skillGroups.reduce((total, group) => total + group.skills.length, 0)}+`,
@@ -98,37 +88,6 @@ export const experienceItems = [
       "Created booking, checkout, and payment workflows with Razorpay integration.",
       "Built reusable UI components and dynamic server-side data tables with export systems.",
     ],
-  },
-];
-
-export const projectItems: ProjectItem[] = [
-  {
-    title: "ContentHub",
-    description:
-      "A full-stack digital content marketplace for buying and selling courses, ebooks, templates, and software — with UPI/QR payments, JWT auth, and admin approval workflows.",
-    image: "/images/projects/contenthub.svg",
-    tags: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "JWT", "Tailwind CSS", "Zustand", "Vercel"],
-    github: "https://github.com/pragatipatil1428/contenthub",
-    demo: "https://contenthub-one-orcin.vercel.app/",
-    note: "Admin panel access is available on request — contact me for demo credentials.",
-  },
-  {
-    title: "Minutely",
-    description:
-      "An AI-powered meeting-notes platform that turns raw notes into summaries, decisions, and tasks — with authentication, a Kanban task board, and an analytics dashboard.",
-    image: "/images/projects/minutely.svg",
-    tags: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS", "Vercel", "Docker"],
-    github: "https://github.com/pragatipatil1428/meetingnotes",
-    demo: "https://meetingnotes-wheat.vercel.app/",
-  },
-  {
-    title: "Spendly",
-    description:
-      "A full-stack personal expense tracker for managing income and expenses — with real-time dashboards, Chart.js analytics, monthly summaries, and one-click CSV export. JWT auth, user-scoped data, and a responsive dark/light UI deployed on Vercel.",
-    image: "/images/projects/spendly.svg",
-    tags: ["React", "Vite", "JavaScript", "Express", "MongoDB", "Mongoose", "JWT", "Chart.js", "Vercel"],
-    github: "https://github.com/pragatipatil1428/expensetracker",
-    demo: "https://expensetracker-nu-black.vercel.app/",
   },
 ];
 
